@@ -18,7 +18,7 @@ Lean is based on a version of a  logical system called _Calculus of Construction
 - `Type 3 : Type 4` and so on...
 - `list` is _polymorphic_ over type universes, i.e., `list α` works for any type `α`
   - polymorphic seems to mean something that can range (vary) over type universes
-    - thinking about an endofunctor `F` like `(Type _ → Type *) ⟿ (Type F(_) → Type F(*))`
+    - thinking about an endofunctor like `(Type _ → Type *) ⟿ (Type f(_) → Type f(*))` where `f : nat -> nat`
       - here I abuse notation to represent the category **Type Universes** as `Type _ → Type *`
 - `_` represents a variable ranging over type levels, so `Type _ → Type _`, takes in an expression of type `Type _` and outputs another expression of `Type _` (remember it's possible that `Type _` is `Type`)
 - an advantage of dependent type theory is the ability to create type constructors as instances of mathematical functions
