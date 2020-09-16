@@ -35,3 +35,7 @@ Lean is based on a version of a  logical system called _Calculus of Construction
   - `\a α`
   - `\b β`
   - `\g γ`
+
+- a free variable is something that is undefined or not bound to a set.
+- there is no ambient state in lean
+  - computation is simply evaluation of instructions
