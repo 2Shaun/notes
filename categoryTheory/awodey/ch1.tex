@@ -43,9 +43,9 @@
 
 
 \rhead{Tommy O'Shaughnessy\\
-Prof. Feng Luo\\
-Abstract Algebra I\\
-12/05/2019}
+Steve Awodey\\
+Category Theory\\
+}
 \begin{document}
 
 \section*{Chapter 1}
@@ -61,10 +61,24 @@ Abstract Algebra I\\
 \end{problem}
 \begin{solution}
 (a) Show that Rel is a category.\\
-Composability:\\
-Identity:\\
-Associativity:\\
-Unit:\\
+\textit{Composability}:\\
+Shown above.\\\\
+\textit{Identity}:\\
+Shown above.\\\\
+\textit{Associativity}:\\
+Let $D\in\mathbf{Rel}$ such that $A\xrightarrow{R} B \xrightarrow{S} C\xrightarrow{T} D$. Consider $\langle a,d\rangle\in T\circ(S\circ R)$. 
+I need to show that $\langle a,d\rangle\in(T\circ S)\circ R$.
+By composition, there exists a $c$ such that $\langle a,c\rangle\in S\circ R$ and
+$\langle c,d\rangle\in T$. Again, by composition, 
+there exists a $b$ such that $\langle a,b\rangle\in R$ and $\langle b,c\rangle\in S$.
+Since $\langle c,d\rangle\in T$, I have that $\langle b,d\rangle\in T\circ S$.
+Finally, since $\langle a,b\rangle\in R$, then $\langle a,d\rangle\in(T\circ S)\circ R$.\\
+Showing $(T\circ S)\circ R\subset T\circ(S\circ R)$ is done symmetrically.\\
+\\
+\textit{Unit}:\\
+Let $\langle a,b\rangle\in R$. By \textit{identity}, $\langle a,a\rangle\in 1_A$ and $\langle b,b\rangle\in 1_B$. \\
+Hence, $\langle a,b\rangle\in R\circ 1_A, 1_B\circ R$. If $\langle a,b\rangle\in R\circ 1_A, 1_B\circ R$; then definitionally $\langle a,b\rangle\in R$.
+This shows that $R\circ 1_A=R=1_B\circ R$.\\
 
 (b) Show also that there is a functor $G:$ Sets $\rightarrow$ Rel taking objects to themselves and each function $f: A \rightarrow B$ to its graph,
 $$
