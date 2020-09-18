@@ -84,11 +84,54 @@ This shows that $R\circ 1_A=R=1_B\circ R$.\\
 $$
 G(f)=\{\langle a, f(a)\rangle \in A \times B \mid a \in A\}
 $$
-(c) Finally, show that there is a functor $C: \mathbf{R e l}^{\mathrm{Op}} \rightarrow$ Rel taking each relation $R \subseteq A \times B$ to its converse $R^{c} \subseteq B \times A,$ where,
+I wish to show that 
+\begin{gather*}
+    G(f:A\rightarrow B) = G(f):G(A)\rightarrow G(B)
+\end{gather*}
+for any function $f$. By the definition of $G$
+\begin{gather*}
+    G(f):G(A)\rightarrow G(B) = G(f):A\rightarrow B.
+\end{gather*}
+By the definition of $G(f)$, it is clear that $G(f)\subseteq A\times B$.
+Thus, $G(f):A\rightarrow B$ is an arrow in $\mathbf{Rel}$.\\
+Now I wish to show that $G(1_A) = 1_{G(A)}$:
+\begin{gather*}
+    \begin{tabular}
+        {RLR}
+        G(1_A)  &= \{\langle a, 1_A(a)\rangle \in A \times A \mid a \in A\} &\\
+                &= \{\langle a, a\rangle \in A \times A \mid a \in A\}      &(1_A(a)=a)\\
+                &= 1_A                                                      &\\
+                &= 1_{G(A)}                                                 &(G(A)=A)
+    \end{tabular}
+\end{gather*}
+\\
+Finally, I wish to show 
+\begin{gather*}
+G(fg)=\{\langle a, fg(a)\rangle \in A \times C \mid a \in A\}
+\text{ and }\\
+GfGg=\{\langle a, c\rangle \in A \times C \mid \exists b(\langle a, b\rangle \in Gg \&\langle b, c\rangle \in Gf)\}
+\end{gather*}
+where $A\xrightarrow{g} B \xrightarrow{f} C$ are any two arrows in \textbf{Sets}.
+If either set is empty, then $A$ or $C$ is empty. In that case, both sets are empty and equal.
+Let $\langle a,fg(a) \rangle \in G(fg)$. By taking $g(a)\in B$, 
+it's clear that $\langle a,fg(a) \rangle \in GfGg$.\\
+Now let $\langle a,c \rangle \in GfGg$. There then exists some $b\in B$ such that $\langle a,b \rangle\in Gg$.
+By definition, $b=g(a)$ and hence $c=fg(a)$. Thus, $\langle a,c \rangle=\langle a,fg(a) \rangle\in G(fg)$.
+\\
+(c) Finally, show that there is a functor $K: \mathbf{R e l}^{\mathrm{Op}} \rightarrow$ Rel taking each relation $R \subseteq A \times B$ to its converse $R^{c} \subseteq B \times A,$ where,
 $$
 \langle a, b\rangle \in R^{c} \Leftrightarrow\langle b, a\rangle \in R
 $$
-
+Consider 
+\begin{gather*}
+    \begin{tabular}
+        {RL}
+    K(SR)   &=K(\{\langle a, c\rangle \in A \times C \mid \exists b(\langle a, b\rangle \in R \,\&\,\langle b, c\rangle \in S)\})\\
+            &=\{\langle c, a\rangle \in C \times A \mid \exists b(\langle c, b\rangle \in S \,\&\,\langle b, a\rangle \in R)\}\\
+            &=\{\langle c, a\rangle \in C \times A \mid \exists b(\langle c, b\rangle \in KS \,\&\,\langle b, a\rangle \in KR)\}\\
+            &=KSKR.
+    \end{tabular}
+\end{gather*}
 \end{solution}
 
 \setcounter{section}{9}
