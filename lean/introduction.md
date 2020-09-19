@@ -53,6 +53,8 @@ Lean is based on a version of a  logical system called _Calculus of Construction
   - $\lambda x:\alpha, fx = \lambda x, fx$
 - $\lambda x:\alpha$ is _abstracting_ over $\alpha$
 - expressions which are the same but have bound variables that are named differently are called $\alpha$-equivalent
+- normalization - notion of reduction
+- expressions which reduce to a common term are called $\beta$-equivalent
 - there are two types of evaluation in Lean
   - `#reduce` kernel evaluation
     - produces type correct terms at each step
@@ -73,3 +75,4 @@ Lean is based on a version of a  logical system called _Calculus of Construction
   - dependent pair ($\exists$)
     - $(n, \alpha(n))$
     - here there is one specific $n$
+- Lean was designed to define objects and prove things with them

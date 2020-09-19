@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1600335656 "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.tex" "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.pdf" "ch1" 1600335657
+["pdflatex"] 1600426812 "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.tex" "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.pdf" "ch1" 1600426813
   "C:/Users/tomwo_26b3mwb/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1600248289 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1600248289 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1600249385 10064092 2ba607db48cf5cca96b9ac58df27e768 ""
@@ -17,6 +17,7 @@
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
+  "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
@@ -70,13 +71,13 @@
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1580648484 12560 ce3f59ceae9d9a27bfe037d6bf1d903c ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1580648486 10216 5efd55f2010055e7b7875afd6a75be82 ""
   "C:/Users/tomwo_26b3mwb/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
-  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.aux" 1600335656 44 dc97af5c6f573c3ca8db466309c44817 ""
-  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.tex" 1600335655 5622 001ccdeb064ce0ae594cb577046b28cd ""
-  "ch1.aux" 1600335656 44 dc97af5c6f573c3ca8db466309c44817 "pdflatex"
-  "ch1.tex" 1600335655 5622 001ccdeb064ce0ae594cb577046b28cd ""
+  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.aux" 1600426813 44 dc97af5c6f573c3ca8db466309c44817 ""
+  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.tex" 1600426811 6699 6362e55777f3e29873e82f2f905805a8 ""
+  "ch1.aux" 1600426813 44 dc97af5c6f573c3ca8db466309c44817 "pdflatex"
+  "ch1.tex" 1600426811 6699 6362e55777f3e29873e82f2f905805a8 ""
   (generated)
+  "ch1.pdf"
+  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.log"
+  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.pdf"
   "ch1.aux"
   "ch1.log"
-  "ch1.pdf"
-  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.pdf"
-  "c:/Users/tomwo_26b3mwb/Documents/notes/categoryTheory/awodey/ch1.log"
