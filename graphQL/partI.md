@@ -16,7 +16,7 @@
 - Ease of Development
   - Things to think about if your company has a high turn over rate of devs, skill of devs, or is growing its dev capacity
 - Cost Efficiency
-  - dev/maitanence cost
+  - dev/maintenance cost
   - cost of change
 
 # GraphQL (anti-)qualities over REST
