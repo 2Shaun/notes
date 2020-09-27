@@ -77,12 +77,14 @@ def do_twice : (ℕ → ℕ) → ℕ → ℕ :=
 def multiply_8 (x : ℕ) := x*8
 #reduce multiply_8 9
 #check sorry
+
 def ex_2_6_1 : (ℕ → ℕ) :=  
     (λ x , multiply_8 ((do_twice double) x))
 #reduce ex_2_6_1 1
 #reduce ex_2_6_1 2
 #reduce ex_2_6_1 3
 #reduce ex_2_6_1 4
+
 #reduce (λ x, double x)2
 #reduce (λ x, double(double x))2
 #reduce (λ x, double(double(double x)))2
@@ -98,3 +100,16 @@ def Do_Twice : ((ℕ → ℕ) → ℕ → ℕ) → (ℕ → ℕ) → (ℕ → �
 ))
 #reduce Do_Twice do_twice double 2
 
+def compose (α β γ : Type*) (g : β → γ) (f : α → β) (x : α) : γ :=
+g (f x)
+def curry (α β γ : Type*) (f : α × β → γ) : α → β → γ :=
+(λ a : α , (λ b : β , f (a,b)))
+def uncurry (α β γ : Type*) (f : α → β → γ) : α × β → γ :=
+(λ p : α × β , f p.fst p.snd)
+
+def fooo := let a := nat in λ x : a, x + 2
+/-
+def bar := (λ a, λ x : a, x + 2)
+this does not type check because (λ x : a, x + 2) doesn't make sense
+with out a defined as a type
+-/
