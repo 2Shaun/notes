@@ -9,3 +9,12 @@
 ### Power Supply
 1. ?
 2. Sparkle FSP300-60ATV 300W ATX Power Supply
+
+### CPU
+1. Intel Core i5-3570k
+2. Intel Core i7-10700 Comet Lake 8-Core 2.9 GHz
+
+## Surface
+
+### CPU
+1. Intel Core i7-1065G7 CPU @ 1.30GHz
