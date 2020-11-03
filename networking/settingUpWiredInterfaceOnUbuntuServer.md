@@ -2,6 +2,8 @@
 
 ## RTL8125
 
+** NOTE, THE LINK WAS DOWN AFTER REBOOT **
+
 1. find network interface with `sudo lshw -class network`
   - `lshw` stands for list hardware
   - `network` lists the network interfaces
@@ -17,7 +19,18 @@
   - `etc` contains configuration files
     -`resolv.conf` contains DNS resolver configuration
 9. add the default gateway of your network to the IP routing table with `route add default gw "the IP address of your gateway"
-  - the gateway enables the DNS to communitcate with the outside network
+  - the gateway enables the DNS to communicate with the outside network
   - the address of the gateway may be the same as the DNS with modern routers
   - the address of your default gateway can be found also with `ipconfig /all` on a connected Windows machine
 
+** AFTER REBOOT **
+
+1. run `sudo apt install ifupdown`
+  - this is used by `/etc/network/interfaces` file to run `ifup` and `ifdown`
+2. add `auto <interface>` to the first line of `/etc/network/interfaces`
+  - this interface will be called with `ifup` on boot
+3. add `iface <interface> <address_family> <method>` to the second line of `/etc/network/interfaces`
+  - `iface` stands for interface
+  - `inet` family consists of ipv4 addresses
+  - `dhcp` method allows the dhcp server to assign an IP address
+4. reboot
