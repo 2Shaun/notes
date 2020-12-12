@@ -1,10 +1,15 @@
 # PC Builds
 
+## SM hardware
+- Dell Displaylink
+- Dell UltraSharp 24 Monitor
+
 ## Second gaming PC
 
 ### Motherboard
 1. ASUS P8Z77-V LK
 2. MSI MPG Z490 GAMING EDGE WIFI LGA 1200 Intel Z490
+  - [rtl8125 ethernet driver needed](https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software)
 
 ### Power Supply
 1. ?
