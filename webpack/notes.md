@@ -32,3 +32,64 @@
 ### Resolve
 
 ### Module
+
+- modules are of the form
+```
+import action from './other-module.js';
+
+var value = action();
+
+export default value;
+```
+
+but wrapped like so by webpack
+```
+function(module, exports, WEBPACK_REQUIRE_METHOD) {
+ 'use strict';
+  
+  var action = WEBPACK_REQUIRE_METHOD(1);
+  var value = action();
+
+  exports.default = value;
+};
+```
+all of these are called in an array passed to an iife (immediately invoked function expression)
+```
+(function(modules) {
+  var installedModules = {};
+
+  /*
+  the scope of this function is passed into functions in the 
+  wrapped modules array. the `id` represents which element it is
+  in that array
+  */
+  function WEBPACK_REQUIRE_METHOD(id) {
+    // if module was already imported, return its exports
+    if (installedModules[id]) {
+      return installedModules[id].exports;
+    }
+
+    /*
+    this creates the module variable
+    and caches it in the `installedModules` array
+    */
+     var module = installedModules[id] = {
+       id: id,
+       exports: {}
+     };
+
+     // call module’s function wrapper
+     modules[id](module, module.exports, WEBPACK_REQUIRE_METHOD);
+  }
+
+  // kick off by calling entry module
+  WEBPACK_REQUIRE_METHOD(0);
+})([
+  /* 0 module */
+  function() {},
+  /* 1 module */
+  function() {},
+  /* n module */
+  function() {}
+]);
+```
