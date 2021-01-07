@@ -9,8 +9,8 @@ const delay = (ms) =>
 const nestedDelay = (ms) =>
   new Task(
     (_, resolve) =>
-      new Task((_, resolve) => {
-        setTimeout(resolve, ms);
+      new Task((_, res = resolve) => {
+        setTimeout(res, ms);
       })
   );
 
@@ -24,11 +24,11 @@ delay100Ms.fork(
   }
 );
 
-console.log(
-  nestedDelay100Ms.fork(
+nestedDelay100Ms
+  .fork(
     () => {},
     () => {
       console.log("hi");
     }
   )
-);
+  .fork(() => {});
