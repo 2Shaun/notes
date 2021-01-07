@@ -1,6 +1,5 @@
 import { curry, compose, increment } from "./exercises04.mjs";
 import { readFile } from "fs";
-import moment from "moment";
 import { throws } from "assert";
 
 const inspect = (x) => {
@@ -248,6 +247,7 @@ trace("left")(Left.of("left").map(changeCase("upper")));
 */
 trace("left")(left("left").map(changeCase("upper")));
 
+/*
 const getAge = curry((now, user) => {
   const birthDate = moment(user.birthDate, "YYYY-MM-DD");
 
@@ -259,6 +259,7 @@ const getAge = curry((now, user) => {
 trace("getAge correct")(getAge(moment(), { birthDate: "1992-03-04" }));
 
 trace("getAge incorrect")(getAge(moment(), { birthDate: "March 4, 1992" }));
+*/
 
 //const url = IO.of(window.location.href);
 
