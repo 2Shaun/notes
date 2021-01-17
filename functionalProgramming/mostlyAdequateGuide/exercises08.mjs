@@ -1,6 +1,7 @@
 import { curry, compose, increment } from "./exercises04.mjs";
 import { readFile } from "fs";
 import { throws } from "assert";
+import { Maybe } from "./classes.mjs";
 
 const inspect = (x) => {
   if (x && typeof x.inspect === "function") {
@@ -33,8 +34,6 @@ const inspect = (x) => {
   return typeof x === "function" ? inspectFn(x) : inspectArgs(x);
 };
 
-const prop = curry((key, obj) => obj[key]);
-
 class Container {
   constructor(x) {
     this.$value = x;
@@ -53,24 +52,6 @@ console.log("---point scope test---");
 let o = { x: 1, y: 2 };
 let g = (obj) => Container.of(prop("x")(obj)).map((_) => obj);
 console.log(g(o));
-
-class Maybe {
-  static of(x) {
-    return new Maybe(x);
-  }
-
-  get isNothing() {
-    return this.$value == null;
-  }
-
-  constructor(x) {
-    this.$value = x;
-  }
-
-  map(fn) {
-    return this.isNothing ? this : Maybe.of(fn(this.$value));
-  }
-}
 
 class IO {
   // IO.of(x) will create a 0-ary function that returns x
@@ -270,7 +251,6 @@ const exercise0801 = map(increment);
 const testContainer = new Container(2);
 console.log(exercise0801(testContainer));
 
-const safeProp = curry((p, obj) => compose(Maybe.of, prop(p))(obj));
 const head = (xs) => xs[0];
 
 const user2 = { id: 2, name: "Albert", active: true };
