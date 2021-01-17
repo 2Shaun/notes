@@ -15,6 +15,9 @@
 1. ?
 2. Sparkle FSP300-60ATV 300W ATX Power Supply
 
+### GPU
+1. AMD Radeon RX 580 4GB GDDR5 Video Graphics Card - OEM
+
 ## Goals
 
 ### Projects
