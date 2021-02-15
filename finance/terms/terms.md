@@ -1,0 +1,44 @@
+- equity
+  - the amount a company has paid on a loan
+- underwriting
+  - accepting a premium to bail out an institution in the case of damage/loss (this is how investment banks make capital)
+  -
+- depth of market (DOM)
+  - number of buy/sell orders of an asset (measure of liquidity)
+  - if there's many buy sell orders, the price is less volatile because more capital is required to move the price. inversely, if there are not many buy sell orders, the price is more volatile because less capital is required to move the price
+- a market maker could make a $5 profit off the bid ask spread if there is a buy order for $15 and a sell order for $10
+  - they tell the buyer that they executed the trade for $15, take $5 and give $10 to the seller
+- FICO score, a credit score. measures the risk of lending a loan
+- morgage backed security (MBS)
+  - bank takes the loan off of their books by selling the load to investors for the principal and interest payments
+    - they could still make money by giving morgages, charging service fees, then selling the MBS
+- clearing
+  - the time from when a transaction is created to the time it is settled
+- share float
+  - the total shares minus shares that are restricted from being traded
+  - liquid float is the amount of shares that are being actively traded
+- LU/LD (limit up/limit down)
+  - a percentage of the current trading price which says the amount you can set limit sells/limit buys for
+- put
+  - right to sell (put the stock on the market)
+  - puts are betting against a stock
+  - strike prices are lower than the current price when OTM
+- call (long position)
+  - right to buy (call dibs on a stock)
+  - calls are betting for a stock
+  - strike prices are higher than the current price when OTM
+- whales
+  - drive a price up and leave right as FUD has kicked in
+- intrinsic value
+  - the strike price minus the underlying asset price
+- settlement
+  - when an asset changes hands (usually a 3 days for a stock to settle)
+  - stocks and money have independent settlement times
+- broker/dealers
+  - so that people don't have to go out and find people to buy stocks from
+- DTCC (Depository Trust & Clearing Corporation)
+  - trades settled through and in the DTCC
+  - brokers can clear stocks external of the DTCC (ex-clearing)
+- IOU
+  - this is created when a trader can not settle a stock
+  - to the individual receiving the IOU, it just looks like a stock
