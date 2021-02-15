@@ -1,5 +1,9 @@
 import { compose } from "./exercises04.mjs";
 
+/*
+map of a particular class always returns that class
+*/
+
 export class Either {
   static of(x) {
     return new Right(x);
@@ -11,8 +15,42 @@ export class Either {
 }
 
 export class Right extends Either {
-  map(f) {
-    return Either.of(f(this.$value));
+  get isLeft() {
+    return false;
+  }
+
+  get isRight() {
+    return true;
+  }
+
+  static of(x) {
+    throw new Error(
+      "`of` called on class Right (value) instead of Either (type)"
+    );
+  }
+
+  map(fn) {
+    return Either.of(fn(this.$value));
+  }
+
+  ap(f) {
+    return f.map(this.$value);
+  }
+
+  chain(fn) {
+    return fn(this.$value);
+  }
+
+  join() {
+    return this.$value;
+  }
+
+  sequence(of) {
+    return this.traverse(of, identity);
+  }
+
+  traverse(of, fn) {
+    fn(this.$value).map(Either.of);
   }
 
   inspect() {
@@ -174,15 +212,19 @@ export class IO {
   }
 
   // ----- Applicative IO
+  // f : IO
   ap(f) {
     return this.chain((fn) => f.map(fn));
   }
 
-  // ----- Monad IO
+  // fn :: a -> IO
+  // this.map(fn) :: IO -> IO x IO
+  // chain(fn) :: fn -> IO
   chain(fn) {
     return this.map(fn).join();
   }
 
+  // IO x IO -> IO
   join() {
     return new IO(() => this.unsafePerformIO().unsafePerformIO());
   }
@@ -289,13 +331,14 @@ class List {
         // fn(a) :: Either e a
         fn(a)
           .map((b) => (bs) => bs.concat(b))
-          // bs is populated by the accumulator,
-          // the value contained in fn(a) is then
-          // extracted by map and concatendated to
-          // the accumulated list inside the new of
           .ap(f),
       // Either.of(new List([]))
       of(new List([]))
     );
   }
 }
+/*
+of(new List([])) is f_0
+fn(a).map(b => bs => bs.concat(b)) : fn(bs => bs.concat(b))
+bs is populated by ap with f_n : List
+*/
