@@ -98,6 +98,28 @@ module.exports = {
 
 ```
 
+- recall `__dirname` is an env variable defined by node to mean the current directory
+
+- you may have helpers defined in `moduleDirectories` that are not needed for webpack to also resolve (say you have eslint setup to resolve what's configured for webpack only), you may need `eslint-import-resolver-jest` as a dev dependency
+
+```
+// re-export everything
+export * from '@testing-library/react'
+
+// override render method
+export { customRender as render }
+```
+
+- a cool way to override a method provided by a library if you want to make sure that rendering all components are wrapped in something like `Provider` by `react-redux`
+
+  - despite react docs recommendation to use `react-test-renderer` for snapshots, this overrided render from rtl will allow you to expect against the return value `toMatchSnapshot`
+
+- in order to debug tests, you can set a breakpoint, click the debug button at the bottom of VS code, and then click 'Run script test'
+
+# [jsconfig.json](https://code.visualstudio.com/docs/languages/jsconfig)
+
+- this file adds configuration to VS code to allow you to press F12 in VS code to go to definitions for custom import resolvers
+
 # questions
 
 - if `react-scripts start` uses node to open the app on port 3000, why are import statements allowed here but not in `jest`?

@@ -10,6 +10,12 @@
 - `setupFilesAfterEnv` in the jest config will run code before the testing framework is added to the environment
   - `@testing-library/jest-dom/extend-expect` was added to extend expect to, for example, contain `toHaveTextContent` which provides more meaningful test fail output
 
+## [@testing-library/jest-dom](https://github.com/testing-library/jest-dom)
+
+- reduces code reuse by providing helper functions that help check the way a dom element is behaving
+  - `toBeVisible`
+    - checks a few things like `display: none` or `opacity: 0` to see if an element is visible to the user
+
 ## HTML review
 
 - ARIA

@@ -1,0 +1,14 @@
+- `document.createElement('root')` created a `<root>` node and not a `<div>`!
+  - I had to set the `id` property of that `Element`
+  - `Element` inherits from `Node` (there are `Node`s that aren't elements)
+  - `<root>` was probably an `HTMLUnknownElement`
+  - analogous to `React.createElement`
+- `append` is analogous to react render from `ReactDOM`
+- `React`, `ReactDOM`, and `Babel` are just javascript files
+- `children` prop accepts an array of `ReactElement`s
+  - they have to be created using `React.createElement` before being called in the `children` array
+- `createElement` is not enough to render it to the DOM
+- `<script>` tags can have a `type="text/babel"` to compile directly in the browser
+- you can spread the children prop to populate a string within a tag, e.g., `let children = 'hello world'; let props = {children}; let element = <div {...props}>;`
+  - you can override a `props` value by putting it AFTER the spread
+- you can't have self closing `<div />` in HTML
